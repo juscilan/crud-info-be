@@ -1,8 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
 const sinon = require('sinon');
-const VeiculoController = require('../src/controllers/VeiculoController');
 const Veiculo = require('../src/models/Veiculo');
+const VeiculoController = require('../src/controllers/VeiculoController');
 
 describe('VeiculoController', () => {
   let veiculoController;
