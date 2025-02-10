@@ -1,0 +1,24 @@
+{
+  "name": "crud-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --require esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "esm": "^3.2.25",
+    "mocha": "^11.1.0",
+    "sinon": "^19.0.2"
+  }
+}
