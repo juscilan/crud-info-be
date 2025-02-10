@@ -9,12 +9,12 @@ db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS veiculos (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      placa TEXT NOT NULL UNIQUE,
-      chassi TEXT NOT NULL UNIQUE,
+      placa TEXT NULL UNIQUE,
+      chassi TEXT NULL UNIQUE,
       renavam TEXT NOT NULL UNIQUE,
-      modelo TEXT NOT NULL,
-      marca TEXT NOT NULL,
-      ano INTEGER NOT NULL
+      modelo TEXT NULL,
+      marca NULL,
+      ano INTEGER NULL
     )
   `);
 });
