@@ -15,7 +15,7 @@ class Veiculo {
   
     // Busca todos os veículos
     findAll(callback) {
-      const sql = 'SELECT * FROM veiculos';
+      const sql = 'SELECT * FROM veiculos order by marca';
       this.db.all(sql, callback);
     }
   

@@ -8,7 +8,7 @@ Content-Type: application/json
   "ano": 1970,
   "cor": "Azul",
   "chassi": "123456789",
-  "renavam": "987654322",
+  "renavam": "987654324",
   "preco": 10000
 }
 
@@ -21,6 +21,6 @@ PUT http://localhost:4000/veiculos/1 HTTP/1.1
 Content-Type: application/json
 
 {
-    "renavam": "987654321",
-    "placa": "ABC-12345"
+  "renavam": "987654321",
+  "placa": "ABC-12345"
 }
