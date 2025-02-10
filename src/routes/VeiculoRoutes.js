@@ -1,6 +1,6 @@
 const express = require('express');
-const VeiculoController = require('../controllers/VeiculoController');
 const db = require('../../database/db');
+const VeiculoController = require('../controllers/VeiculoController');
 
 const router = express.Router();
 const veiculoController = new VeiculoController(db);
