@@ -1,16 +1,16 @@
 ```markdown
-# Info's CRUD BackEnd Application
+# Info's CRUD Backend Application
 
 This is a simple **Node.js CRUD** application built with **Express**, **SQLite**, and **Mocha** for testing.
 
 ## Table of Contents
 
 - [Running on Docker](#running-on-docker)
-- [Prerequisites](#prerequisites)
+- [Running Locally (Prerequisites)](#running-locally-prerequisites)
 - [Installing Dependencies](#installing-dependencies)
 - [Running the Application](#running-the-application)
 - [Running Unit Tests](#running-unit-tests)
-- [Developed by](#developed-by)
+- [Developed By](#developed-by)
 
 ---
 
@@ -34,9 +34,9 @@ This will build the Docker image and start the application on port **4000**.
 
 ---
 
-## Running local (Prerequisites)
+## Running Locally (Prerequisites)
 
-Ensure you have **Node.js version 22.13.1** installed on your machine. 
+Ensure you have **Node.js version 22.13.1** installed on your machine.
 
 ### Using `nvm` (Node Version Manager)
 
@@ -100,7 +100,9 @@ This will run the tests using **Mocha** and **Chai**. By default, the tests will
 
 ---
 
-## Developed by
+## Developed By
 
-[juscilan.com](https://juscilan.com).
+[juscilan.com](https://juscilan.com) 🚀🚀🚀🚀🚀
 ```
+
+
