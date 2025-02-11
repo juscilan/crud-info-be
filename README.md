@@ -4,6 +4,14 @@
 This is a simple Node.js CRUD application built with Express, SQLite, and Mocha for testing.
 
 ## Prerequisites
+Running on Docker
+
+```bash
+   docker build -t crud-info-be . 
+```
+```bash
+   docker run -p 4000:4000 crud-info-be 
+```
 
 Ensure you have **Node.js version 22.13.1** installed on your machine.
 
