@@ -1,0 +1,173 @@
+openapi: 3.0.0
+info:
+  title: API de Veículos
+  description: API para gerenciamento de veículos
+  version: 1.0.0
+
+paths:
+  /veiculos:
+    get:
+      summary: Lista todos os veículos
+      responses:
+        '200':
+          description: Lista de veículos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    modelo:
+                      type: string
+                    marca:
+                      type: string
+                    ano:
+                      type: integer
+                    placa:
+                      type: string
+                  required:
+                    - modelo
+                    - marca
+                    - ano
+                    - placa
+    post:
+      summary: Cria um novo veículo
+      requestBody:
+        description: Veículo a ser criado
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                modelo:
+                  type: string
+                marca:
+                  type: string
+                ano:
+                  type: integer
+                placa:
+                  type: string
+              required:
+                - modelo
+                - marca
+                - ano
+                - placa
+      responses:
+        '201':
+          description: Veículo criado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '500':
+          description: Erro no servidor
+
+  /veiculos/{id}:
+    get:
+      summary: Busca um veículo por ID
+      parameters:
+        - name: id
+          in: path
+          description: ID do veículo
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalhes do veículo
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modelo:
+                    type: string
+                  marca:
+                    type: string
+                  ano:
+                    type: integer
+                  placa:
+                    type: string
+                required:
+                  - modelo
+                  - marca
+                  - ano
+                  - placa
+        '404':
+          description: Veículo não encontrado
+        '500':
+          description: Erro no servidor
+
+    put:
+      summary: Atualiza um veículo existente
+      parameters:
+        - name: id
+          in: path
+          description: ID do veículo a ser atualizado
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Dados para atualizar o veículo
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                modelo:
+                  type: string
+                marca:
+                  type: string
+                ano:
+                  type: integer
+                placa:
+                  type: string
+              required:
+                - modelo
+                - marca
+                - ano
+                - placa
+      responses:
+        '200':
+          description: Veículo atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Veículo não encontrado
+        '500':
+          description: Erro no servidor
+
+    delete:
+      summary: Remove um veículo
+      parameters:
+        - name: id
+          in: path
+          description: ID do veículo a ser removido
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Veículo removido com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '404':
+          description: Veículo não encontrado
+        '500':
+          description: Erro no servidor
