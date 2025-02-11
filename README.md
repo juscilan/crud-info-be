@@ -1,7 +1,5 @@
-Aqui está o README melhorado, com algumas melhorias na formatação e clareza:
-
 ```markdown
-# Info's CRUD Application
+# Info's CRUD BackEnd Application
 
 This is a simple **Node.js CRUD** application built with **Express**, **SQLite**, and **Mocha** for testing.
 
