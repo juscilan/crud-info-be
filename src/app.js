@@ -18,7 +18,7 @@ app.disable('x-powered-by');
 
 const swaggerDocument = YAML.load(path.join(__dirname, 'swagger.yaml'));
 
-// Configurar o Swagger UI na rota /api-docs
+// Configurar o Swagger UI na rota /doc
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(bodyParser.json());
