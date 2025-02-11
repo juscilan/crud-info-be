@@ -15,7 +15,6 @@ app.use(cors());
 app.disable('x-powered-by');
 
 // Carregar o arquivo Swagger YAML
-
 const swaggerDocument = YAML.load(path.join(__dirname, 'swagger.yaml'));
 
 // Configurar o Swagger UI na rota /doc
