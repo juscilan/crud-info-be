@@ -4,7 +4,6 @@ const path = require('path');
 const dbPath = path.resolve(__dirname, 'veiculos.db');
 const db = new sqlite3.Database(dbPath);
 
-// Cria a tabela de veículos
 db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS veiculos (

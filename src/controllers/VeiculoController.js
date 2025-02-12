@@ -5,7 +5,6 @@ class VeiculoController {
     this.veiculoModel = new Veiculo(db);
   }
 
-  // Cria um novo veículo
   create(req, res) {
     const veiculo = req.body;
     this.veiculoModel.create(veiculo, function (err) {
@@ -16,7 +15,6 @@ class VeiculoController {
     });
   }
 
-  // Lista todos os veículos
   findAll(req, res) {
     this.veiculoModel.findAll(function (err, veiculos) {
       if (err) {
@@ -26,7 +24,6 @@ class VeiculoController {
     });
   }
 
-  // Busca um veículo por ID
   findById(req, res) {
     const id = req.params.id;
     this.veiculoModel.findById(id, function (err, veiculo) {
@@ -40,7 +37,6 @@ class VeiculoController {
     });
   }
 
-  // Atualiza um veículo
   update(req, res) {
     const id = req.params.id;
     const veiculo = req.body;
@@ -52,7 +48,6 @@ class VeiculoController {
     });
   }
 
-  // Remove um veículo
   delete(req, res) {
     const id = req.params.id;
     this.veiculoModel.delete(id, function (err) {

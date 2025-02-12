@@ -3,7 +3,6 @@ class Veiculo {
       this.db = db;
     }
   
-    // Cria um novo veículo
     create(veiculo, callback) {
       const { placa, chassi, renavam, modelo, marca, ano } = veiculo;
       const sql = `
@@ -13,19 +12,16 @@ class Veiculo {
       this.db.run(sql, [placa, chassi, renavam, modelo, marca, ano], callback);
     }
   
-    // Busca todos os veículos
     findAll(callback) {
       const sql = 'SELECT * FROM veiculos order by marca';
       this.db.all(sql, callback);
     }
   
-    // Busca um veículo por ID
     findById(id, callback) {
       const sql = 'SELECT * FROM veiculos WHERE id = ?';
       this.db.get(sql, [id], callback);
     }
   
-    // Atualiza um veículo
     update(id, veiculo, callback) {
       const { placa, chassi, renavam, modelo, marca, ano } = veiculo;
       const sql = `
@@ -36,7 +32,6 @@ class Veiculo {
       this.db.run(sql, [placa, chassi, renavam, modelo, marca, ano, id], callback);
     }
   
-    // Remove um veículo
     delete(id, callback) {
       const sql = 'DELETE FROM veiculos WHERE id = ?';
       this.db.run(sql, [id], callback);
